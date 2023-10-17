@@ -1,0 +1,16 @@
+/* Intro component
+-----------------*/
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 0 1.125rem;
+
+  &__legion {
+    max-width: 16rem;
+    z-index: 100;
+  }
+}

@@ -1,0 +1,14 @@
+/* Gamepass component
+-------------------- */
+.gamepass {
+  padding: 0 1rem;
+
+  &__logo {
+    max-width: 10rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin: 0;
+  }
+}

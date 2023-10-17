@@ -1,0 +1,41 @@
+// Root variables
+:root {
+  // Primary button
+  --btn__primary-bg: #3e8ddd;
+  --btn__primary-text: #ffffff;
+  // Secondary button
+  --btn__secondary-bg: transparent;
+  --btn__secondary-text: #ffffff;
+  --btn__secondary-bg--hover: #ffffff;
+  --btn__secondary-text--hover: #000000;
+  --btn__secondary-border: 1px solid #3e8ddd;
+  // Button Go
+  --btn__go-bg: #ffffff;
+  --btn__go-text: #000000;
+  --btn__go-border: 3px solid #000000;
+  --btn__go-text--hover: #ffffff;
+  --btn__go-bg--hover: #000000;
+  --btn__go-border--hover: 1px solid #ffffff;
+  ///////////////////////////////////////////
+  --bg-gradient: linear-gradient(
+    180deg,
+    #11184e 0%,
+    #12194f 6%,
+    #881a22 19.1%,
+    #881b23 26.27%,
+    #4e2067 35.34%,
+    #232298 41.55%,
+    #242398 59.28%,
+    #111751 70.96%,
+    #222197 100%
+  );
+  ///////////////////////////////////////////
+  --bg-color-menu: #202134;
+  --bg-color-dark: #0e101d;
+  --bg-color-light: #2d2e40;
+}
+
+body {
+  background: var(--bg-gradient);
+  background-repeat: no-repeat;
+}

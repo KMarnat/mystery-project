@@ -1,0 +1,14 @@
+/* Header component
+--------------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  background-color: var(--bg-color-dark);
+  align-items: center;
+
+  &__button {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
