@@ -1,0 +1,57 @@
+/* Footer component
+-------------------*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0 1rem;
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    margin: 0 1rem;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 17rem;
+    padding: 0;
+
+    & li {
+      margin-right: 0.5rem;
+      position: relative;
+
+      &:after {
+        content: '·'; // The dot between items
+        margin-left: 0.5rem;
+      }
+
+      &:nth-of-type(3) {
+        margin-right: 0;
+      }
+
+      &:nth-of-type(3)::after {
+        content: none; // The dot between items
+      }
+
+      // Selecting last item
+      &:last-of-type {
+        margin-right: 0; // Removing margin right
+      }
+
+      &:last-of-type:after {
+        content: none;
+      }
+    }
+  }
+
+  &__copyright {
+    color: #818694;
+  }
+}

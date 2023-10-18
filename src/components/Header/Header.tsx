@@ -1,17 +1,32 @@
+import Menu from '../../components/Menu/Menu';
 import navarrow from '../../assets/nav-arrow.svg';
 import menu from '../../assets/menu.svg';
 import navlogo from '../../assets/logo-navbar.svg';
+import { useNavigate } from 'react-router-dom';
+import { MouseEventHandler } from 'react';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  activeMenu: boolean;
+  setActiveMenu: (activeMenu: boolean) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ activeMenu, setActiveMenu }) => {
+  const navigate = useNavigate();
+
+  const handleClick: MouseEventHandler<HTMLElement> = () => {
+    navigate(-1);
+  };
+
   return (
     <header className="header">
-      <button className="header__button">
+      <button className="header__button" onClick={handleClick}>
         <img src={navarrow} alt="nav arrow" />
       </button>
       <img src={navlogo} alt="nav logo" className="header__logo" />
-      <button className="header__button">
+      <button className="header__button" onClick={() => setActiveMenu(!activeMenu)}>
         <img src={menu} alt="menu" />
       </button>
+      <Menu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
     </header>
   );
 };

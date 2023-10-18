@@ -34,4 +34,10 @@
       border: var(--btn__go-border--hover);
     }
   }
+
+  &--gamepass {
+    background-color: var(--color-gamepass);
+    width: 100%;
+    border-radius: 0;
+  }
 }

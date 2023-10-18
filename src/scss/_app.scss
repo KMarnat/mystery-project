@@ -12,7 +12,7 @@
   // Button Go
   --btn__go-bg: #ffffff;
   --btn__go-text: #000000;
-  --btn__go-border: 3px solid #000000;
+  --btn__go-border: 1px solid #000000;
   --btn__go-text--hover: #ffffff;
   --btn__go-bg--hover: #000000;
   --btn__go-border--hover: 1px solid #ffffff;
@@ -33,9 +33,12 @@
   --bg-color-menu: #202134;
   --bg-color-dark: #0e101d;
   --bg-color-light: #2d2e40;
+  --color-gamepass: #9bf00b;
 }
 
 body {
   background: var(--bg-gradient);
   background-repeat: no-repeat;
+  background-size: 100% 300%;
+  position: relative;
 }

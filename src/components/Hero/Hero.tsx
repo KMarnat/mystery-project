@@ -1,6 +1,8 @@
-import banner from '../../assets/banner-image.svg';
+interface HeroProps {
+  banner: string;
+}
 
-const Hero: React.FC = () => {
+const Hero: React.FC<HeroProps> = ({ banner }) => {
   return (
     <section className="hero">
       <img src={banner} alt="" className="hero__banner" />
