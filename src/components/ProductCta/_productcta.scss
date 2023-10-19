@@ -1,0 +1,24 @@
+/* ProductCta component
+--------------------- */
+.product-ad {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 4rem;
+  text-align: center;
+  align-items: center;
+
+  &__image {
+    min-height: 3rem;
+    margin-bottom: 4rem;
+
+    &--modified {
+      margin-bottom: 1rem;
+    }
+  }
+
+  button {
+    width: auto;
+    padding: 0 3rem;
+  }
+}

@@ -2,7 +2,7 @@ import Menu from '../../components/Menu/Menu';
 import navarrow from '../../assets/nav-arrow.svg';
 import menu from '../../assets/menu.svg';
 import navlogo from '../../assets/logo-navbar.svg';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MouseEventHandler } from 'react';
 
 interface HeaderProps {
@@ -22,7 +22,9 @@ const Header: React.FC<HeaderProps> = ({ activeMenu, setActiveMenu }) => {
       <button className="header__button" onClick={handleClick}>
         <img src={navarrow} alt="nav arrow" />
       </button>
-      <img src={navlogo} alt="nav logo" className="header__logo" />
+      <Link to={'/'}>
+        <img src={navlogo} alt="nav logo" className="header__logo" />
+      </Link>
       <button className="header__button" onClick={() => setActiveMenu(!activeMenu)}>
         <img src={menu} alt="menu" />
       </button>

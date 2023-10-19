@@ -4,6 +4,7 @@ import fgIcon from '../../assets/menu-icons/fg_icon.svg';
 import f1Icon from '../../assets/menu-icons/f1_icon.svg';
 import legionIcon from '../../assets/menu-icons/legion_icon.svg';
 import gpIcon from '../../assets/menu-icons/gp_icon.svg';
+import { Link } from 'react-router-dom';
 
 interface MenuProps {
   activeMenu: boolean;
@@ -57,18 +58,25 @@ const Menu: React.FC<MenuProps> = ({ activeMenu, setActiveMenu }) => {
       <nav className="nav">
         <h5 className="nav__title">Experience during Dreamhack</h5>
         <ul className="nav__list">
-          <li>
-            <img src={legionIcon} alt="" />
-            Legion T5 Gaming Desktop
-          </li>
-          <li>
-            <img src={legionIcon} alt="" />
-            Legion 9i Gaming Laptop
-          </li>
-          <li>
-            <img src={legionIcon} alt="" />
-            Legion Go Portable Gaming
-          </li>
+          <Link to={'/lenovo-legion-t5-gaming-desktop'} onClick={() => setActiveMenu(!activeMenu)}>
+            <li>
+              <img src={legionIcon} alt="" />
+              Legion T5 Gaming Desktop
+            </li>
+          </Link>
+
+          <Link to={'/lenovo-legion-9i-gaming-laptop'} onClick={() => setActiveMenu(!activeMenu)}>
+            <li>
+              <img src={legionIcon} alt="" />
+              Legion 9i Gaming Laptop
+            </li>
+          </Link>
+          <Link to={'/lenovo-legion-go'} onClick={() => setActiveMenu(!activeMenu)}>
+            <li>
+              <img src={legionIcon} alt="" />
+              Legion Go Portable Gaming
+            </li>
+          </Link>
         </ul>
       </nav>
     </aside>

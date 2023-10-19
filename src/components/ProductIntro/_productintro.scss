@@ -1,0 +1,31 @@
+/* Product introduction component 
+---------------------------------*/
+.product-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem 0 4rem;
+  padding: 0 1rem;
+
+  &__title {
+    align-self: flex-start;
+  }
+
+  &__image {
+    width: 20rem;
+  }
+
+  &__promotion {
+    display: flex;
+    gap: 1.5rem;
+
+    img {
+      height: 1.6rem;
+      margin: 1rem 0;
+    }
+  }
+
+  &__description {
+    text-align: center;
+  }
+}
