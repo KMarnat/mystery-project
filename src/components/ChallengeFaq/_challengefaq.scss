@@ -1,0 +1,13 @@
+/* ChallengeFaq component
+------------------------ */
+.challengefaq {
+  padding: 0 1rem;
+
+  &__question {
+    margin-bottom: 2rem;
+
+    h5 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

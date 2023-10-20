@@ -34,6 +34,7 @@
   --bg-color-dark: #0e101d;
   --bg-color-light: #2d2e40;
   --color-gamepass: #9bf00b;
+  --color-text-muted: #818694;
 }
 
 body {
@@ -41,4 +42,14 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 300%;
   position: relative;
+}
+
+.fancy-label {
+  background-color: rgba(14, 16, 29, 0.3);
+  margin-right: 0.5rem;
+  color: var(--btn__primary-text);
+  font-weight: 300;
+  height: auto;
+  padding: 0.2rem 0.5rem;
+  word-break: break-all;
 }

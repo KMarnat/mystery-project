@@ -1,0 +1,12 @@
+/* ChallengepageFG component
+--------------------------- */
+.challengepagefg {
+  &__score {
+    display: flex;
+    margin-bottom: 0.5rem;
+    height: auto;
+    p {
+      margin: 0;
+    }
+  }
+}

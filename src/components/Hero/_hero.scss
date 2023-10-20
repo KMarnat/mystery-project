@@ -8,6 +8,11 @@
   margin-top: 5rem;
   margin-bottom: -7rem;
 
+  &--normal {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   &__banner {
     width: 100%;
     -webkit-mask-image: -webkit-gradient(
@@ -18,5 +23,10 @@
       to(rgba(0, 0, 0, 0))
     );
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+    &--normal {
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
   }
 }

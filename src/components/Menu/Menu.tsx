@@ -33,18 +33,24 @@ const Menu: React.FC<MenuProps> = ({ activeMenu, setActiveMenu }) => {
       <nav className="nav">
         <h5 className="nav__title">Play and Win</h5>
         <ul className="nav__list">
-          <li>
-            <img src={csIcon} alt="" />
-            Counter-Strike 2
-          </li>
-          <li>
-            <img src={fgIcon} alt="" />
-            Fall Guys
-          </li>
-          <li>
-            <img src={f1Icon} alt="" />
-            F1 2023
-          </li>
+          <Link to={'/cs2-challenge'} onClick={() => setActiveMenu(!activeMenu)}>
+            <li>
+              <img src={csIcon} alt="" />
+              Counter-Strike 2
+            </li>
+          </Link>
+          <Link to={'/fg-challenge'} onClick={() => setActiveMenu(!activeMenu)}>
+            <li>
+              <img src={fgIcon} alt="" />
+              Fall Guys
+            </li>
+          </Link>
+          <Link to={'/f1-challenge'} onClick={() => setActiveMenu(!activeMenu)}>
+            <li>
+              <img src={f1Icon} alt="" />
+              F1 2023
+            </li>
+          </Link>
           <li>
             <img src={legionIcon} alt="" />
             Daily Raffles
