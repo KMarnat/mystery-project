@@ -11,8 +11,6 @@ import DesktopProductPage from './pages/DesktopProductPage/DesktopProductPage.ts
 import ChallengePageCS from './pages/ChallengePageCS/ChallengePageCS.tsx';
 import ChallengePageF1 from './pages/ChallengePageF1/ChallengePageF1.tsx';
 import ChallengePageFG from './pages/ChallengePageFG/ChallengePageFG.tsx';
-import RafflesPage from './pages/RafflesPage/RafflesPage.tsx';
-import RaffleWinnersPage from './pages/RaffleWinnersPage/RaffleWinnersPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -57,18 +55,6 @@ const router = createBrowserRouter([
       {
         path: '/f1-challenge',
         element: <ChallengePageF1 />,
-      },
-      {
-        path: '/raffles',
-        element: <RafflesPage />,
-      },
-      {
-        path: '/raffles',
-        element: <RafflesPage />,
-      },
-      {
-        path: '/raffles/winners',
-        element: <RaffleWinnersPage />,
       },
     ],
   },

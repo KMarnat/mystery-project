@@ -17,9 +17,7 @@ const Intro: React.FC<IntroProps> = ({ activeMenu, setActiveMenu }) => {
         vivid touchscreen display, controls that will keep you at the top of the leaderboards & so
         much more.
       </p>
-      <Link to={'/lenovo-legion-go'} onClick={() => setActiveMenu(!activeMenu)}>
-        <Button modifier="go">Try It Out</Button>
-      </Link>
+      <Button modifier="go">Try It Out</Button>
     </section>
   );
 };
