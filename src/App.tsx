@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <>
       <Header activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
-      <Outlet />
+      <Outlet context={[activeMenu, setActiveMenu]} />
       <Footer />
     </>
   );

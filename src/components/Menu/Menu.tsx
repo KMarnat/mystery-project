@@ -51,10 +51,13 @@ const Menu: React.FC<MenuProps> = ({ activeMenu, setActiveMenu }) => {
               F1 2023
             </li>
           </Link>
-          <li>
-            <img src={legionIcon} alt="" />
-            Daily Raffles
-          </li>
+          <Link to={'/raffles'} onClick={() => setActiveMenu(!activeMenu)}>
+            <li>
+              <img src={legionIcon} alt="" />
+              Daily Raffles
+            </li>
+          </Link>
+
           <li>
             <img src={gpIcon} alt="" />
             Try Game Pass for Free
