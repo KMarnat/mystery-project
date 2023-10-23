@@ -11,6 +11,10 @@ import DesktopProductPage from './pages/DesktopProductPage/DesktopProductPage.ts
 import ChallengePageCS from './pages/ChallengePageCS/ChallengePageCS.tsx';
 import ChallengePageF1 from './pages/ChallengePageF1/ChallengePageF1.tsx';
 import ChallengePageFG from './pages/ChallengePageFG/ChallengePageFG.tsx';
+import ProfilePage from './pages/ProfilePage/ProfilePage.tsx';
+import ProfileChallengesPage from './pages/ProfileChallengePage/ProfileChallengesPage.tsx';
+import ProfileManage from './pages/ProfileManagePage/ProfileManage.tsx';
+import ProfileChangeAvatarPage from './pages/ProfileChangeAvatarPage/ProfileChangeAvatarPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +52,22 @@ const router = createBrowserRouter([
       {
         path: '/f1-challenge',
         element: <ChallengePageF1 />,
+      },
+      {
+        path: '/profile',
+        element: <ProfilePage />,
+      },
+      {
+        path: '/profile/challenges',
+        element: <ProfileChallengesPage />,
+      },
+      {
+        path: '/profile/manage',
+        element: <ProfileManage />,
+      },
+      {
+        path: '/profile/manage/change-avatar',
+        element: <ProfileChangeAvatarPage />,
       },
     ],
   },

@@ -4,6 +4,7 @@ import fgIcon from '../../assets/menu-icons/fg_icon.svg';
 import f1Icon from '../../assets/menu-icons/f1_icon.svg';
 import legionIcon from '../../assets/menu-icons/legion_icon.svg';
 import gpIcon from '../../assets/menu-icons/gp_icon.svg';
+import giraffeAvatar from '../../assets/giraffeAvatar.svg';
 import { Link } from 'react-router-dom';
 
 interface MenuProps {
@@ -15,17 +16,17 @@ const Menu: React.FC<MenuProps> = ({ activeMenu, setActiveMenu }) => {
   return (
     <aside className={`menu ${activeMenu ? 'menu--active' : ''}`}>
       <div className="menu__useractions">
-        <div className="menu__user-avatar--border">
-          <img
-            src="https://brandweb.agency/wp-content/uploads/2023/04/brandweb_alexander.png"
-            alt="avatar"
-            className="menu__user-avatar"
-          />
-        </div>
-        <div className="menu__user">
-          <h5 className="lead">Neroin</h5>
-          <p>Alexander Juul Jakobsen</p>
-        </div>
+        <Link to={'/profile'} onClick={() => setActiveMenu(!activeMenu)}>
+          <div className="menu__user">
+            <div className="menu__user-border">
+              <img src={giraffeAvatar} alt="avatar" className="menu__user-avatar" />
+            </div>
+            <div className="menu__user-details">
+              <h5 className="lead">Neroin</h5>
+              <p>Alexander Juul Jakobsen</p>
+            </div>
+          </div>
+        </Link>
         <button className="menu__exit" onClick={() => setActiveMenu(!activeMenu)}>
           <img src={exit} alt="" />
         </button>

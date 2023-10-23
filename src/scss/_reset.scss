@@ -33,7 +33,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  // min-height: 100vh;
   text-rendering: optimizeSpeed;
 }
 
@@ -85,6 +85,11 @@ input[type='submit'] {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+}
+
+textarea,
+input {
+  outline: none;
 }
 
 /*ANCHOR TAG*/

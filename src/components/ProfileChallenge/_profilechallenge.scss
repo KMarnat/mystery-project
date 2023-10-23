@@ -1,0 +1,38 @@
+/* ProfileChallenge component
+--------------------------- */
+.profile-challenge {
+  background-color: var(--color-transparent);
+  padding: 1rem;
+  display: flex;
+  margin: 1rem 0;
+  overflow: hidden;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__poster {
+    margin-right: 1rem;
+  }
+
+  &__filters {
+    span {
+      word-break: keep-all;
+      white-space: nowrap;
+    }
+  }
+
+  &__company {
+    display: flex;
+
+    img {
+      margin-right: 0.5rem;
+    }
+  }
+}

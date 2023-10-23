@@ -23,28 +23,34 @@
   }
 
   &__user {
-    margin: 0 0.5rem;
-    h5 {
-      margin: 0;
-    }
+    display: flex;
 
-    p {
-      margin: 0;
-      color: var(--color-text-muted);
+    &-details {
+      margin: 0 0.5rem;
+
+      h5 {
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+        color: var(--color-text-muted);
+      }
     }
 
     &-avatar {
       border-radius: 50%;
       height: 3rem;
-      &--border {
-        height: 3.3rem;
-        width: 3.3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: var(--btn__primary-bg);
-        border-radius: 50%;
-      }
+    }
+
+    &-border {
+      height: 3.3rem;
+      width: 3.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--btn__primary-bg);
+      border-radius: 50%;
     }
   }
 

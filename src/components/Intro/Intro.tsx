@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import legiongo from '../../assets/legion_go.svg';
 import Button from '../Button/Button';
 
@@ -11,7 +12,9 @@ const Intro: React.FC = () => {
         vivid touchscreen display, controls that will keep you at the top of the leaderboards & so
         much more.
       </p>
-      <Button modifier="go">Try It Out</Button>
+      <Link to={'/lenovo-legion-go'}>
+        <Button modifier="go">Try It Out</Button>
+      </Link>
     </section>
   );
 };
