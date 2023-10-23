@@ -17,7 +17,15 @@
 @import './components/leaderboard/leaderboard';
 @import './components/leaderboardrow/leaderboardrow';
 @import './components/challengefaq/challengefaq';
+@import './components/profilecard/profilecard';
+@import './components/profilechallenge/profilechallenge';
+@import './components/changeavatar/changeavatar';
+
 //pages
 @import './pages/homepage/homepage';
 @import './pages/gamepasspage/gamepasspage';
 @import './pages/challengepagefg/challengepagefg';
+@import './pages/profilepage/profilepage';
+@import './pages/profilechallengepage/profilechallengepage';
+@import './pages/profilemanagepage/profilemanage';
+@import './pages/profilechangeavatarpage/profilechangeavatarpage';
