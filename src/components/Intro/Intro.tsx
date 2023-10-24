@@ -2,12 +2,7 @@ import { Link } from 'react-router-dom';
 import legiongo from '../../assets/legion_go.svg';
 import Button from '../Button/Button';
 
-interface IntroProps {
-  activeMenu: boolean;
-  setActiveMenu: (activeMenu: boolean) => void;
-}
-
-const Intro: React.FC<IntroProps> = ({ activeMenu, setActiveMenu }) => {
+const Intro: React.FC = () => {
   return (
     <section className="intro">
       <img src={legiongo} alt="" className="intro__legion" />
@@ -17,7 +12,9 @@ const Intro: React.FC<IntroProps> = ({ activeMenu, setActiveMenu }) => {
         vivid touchscreen display, controls that will keep you at the top of the leaderboards & so
         much more.
       </p>
-      <Button modifier="go">Try It Out</Button>
+      <Link to={'/lenovo-legion-go'}>
+        <Button modifier="go">Try It Out</Button>
+      </Link>
     </section>
   );
 };

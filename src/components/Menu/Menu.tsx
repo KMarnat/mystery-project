@@ -1,29 +1,34 @@
+import { Link } from 'react-router-dom';
+import { useUiContext } from '../../contexts/UiContext';
+import { useUserContext } from '../../contexts/UserContext';
 import exit from '../../assets/exit.svg';
 import csIcon from '../../assets/menu-icons/cs_icon.svg';
 import fgIcon from '../../assets/menu-icons/fg_icon.svg';
 import f1Icon from '../../assets/menu-icons/f1_icon.svg';
 import legionIcon from '../../assets/menu-icons/legion_icon.svg';
 import gpIcon from '../../assets/menu-icons/gp_icon.svg';
-import giraffeAvatar from '../../assets/giraffeAvatar.svg';
-import { Link } from 'react-router-dom';
 
-interface MenuProps {
-  activeMenu: boolean;
-  setActiveMenu: (activeMenu: boolean) => void;
-}
+const Menu: React.FC = () => {
+  const { activeMenu, setActiveMenu } = useUiContext();
+  const { username, fullName, avatar } = useUserContext();
 
-const Menu: React.FC<MenuProps> = ({ activeMenu, setActiveMenu }) => {
   return (
     <aside className={`menu ${activeMenu ? 'menu--active' : ''}`}>
       <div className="menu__useractions">
         <Link to={'/profile'} onClick={() => setActiveMenu(!activeMenu)}>
           <div className="menu__user">
             <div className="menu__user-border">
-              <img src={giraffeAvatar} alt="avatar" className="menu__user-avatar" />
+              <img src={avatar} alt="avatar" className="menu__user-avatar" />
             </div>
             <div className="menu__user-details">
-              <h5 className="lead">Neroin</h5>
-              <p>Alexander Juul Jakobsen</p>
+              {!username || !fullName ? (
+                <h5>Click to sign up</h5>
+              ) : (
+                <>
+                  <h5>{username}</h5>
+                  <p>{fullName}</p>
+                </>
+              )}
             </div>
           </div>
         </Link>
@@ -58,11 +63,12 @@ const Menu: React.FC<MenuProps> = ({ activeMenu, setActiveMenu }) => {
               Daily Raffles
             </li>
           </Link>
-
-          <li>
-            <img src={gpIcon} alt="" />
-            Try Game Pass for Free
-          </li>
+          <Link to={'/gamepass'} onClick={() => setActiveMenu(!activeMenu)}>
+            <li>
+              <img src={gpIcon} alt="" />
+              Try Game Pass for Free
+            </li>
+          </Link>
         </ul>
       </nav>
       <nav className="nav">

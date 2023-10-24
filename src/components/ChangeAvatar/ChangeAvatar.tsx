@@ -1,14 +1,29 @@
-import giraffeAvatar from '../../assets/giraffeAvatar.svg';
+import { useUserContext } from '../../contexts/UserContext';
+
 import giraffeSmall from '../../assets/giraffeSmall.svg';
 import AvatarGallery from '../AvatarGallery/AvatarGallery';
 import Button from '../Button/Button';
 import { images, images2, images3, images4, images5 } from './utils/images';
 
-const ChangeAvatar = () => {
+const ChangeAvatar: React.FC = () => {
+  const { avatar, setAvatar } = useUserContext();
+
+  const handleClick: React.MouseEventHandler<HTMLImageElement> = (e) => {
+    setAvatar(e.currentTarget.src);
+  };
+
+  const defaultImage =
+    'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png';
+
   return (
     <div className="change-image">
-      <img src={giraffeAvatar} alt="current profile avatar" className="change-image__main" />
-      <Button modifier="secondary">Remove Avatar</Button>
+      <img src={avatar} alt="current profile avatar" className="change-image__main" />
+      <Button
+        modifier="secondary"
+        onClick={() => avatar !== defaultImage && setAvatar(defaultImage)}
+      >
+        Remove Avatar
+      </Button>
       <div className="gallery">
         <p className="gallery__title">Your avatar history</p>
         <div className="gallery__grid">
@@ -25,7 +40,7 @@ const ChangeAvatar = () => {
             </label>
           </div>
           <div className="gallery__image">
-            <img src={giraffeSmall} alt="" />
+            <img src={giraffeSmall} alt="" onClick={handleClick} />
           </div>
           <div className="gallery__image"></div>
           <div className="gallery__image"></div>

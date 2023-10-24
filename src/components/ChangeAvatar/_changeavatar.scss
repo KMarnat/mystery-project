@@ -7,6 +7,10 @@
 
   &__main {
     margin-bottom: 1.5rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
   }
 
   button {
@@ -48,9 +52,6 @@
 
     &__title {
       margin-bottom: 0.5rem;
-    }
-
-    &__upload {
     }
   }
 }

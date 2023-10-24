@@ -15,6 +15,8 @@ import ProfilePage from './pages/ProfilePage/ProfilePage.tsx';
 import ProfileChallengesPage from './pages/ProfileChallengePage/ProfileChallengesPage.tsx';
 import ProfileManage from './pages/ProfileManagePage/ProfileManage.tsx';
 import ProfileChangeAvatarPage from './pages/ProfileChangeAvatarPage/ProfileChangeAvatarPage.tsx';
+import RaffleWinnersPage from './pages/RaffleWinnersPage/RaffleWinnersPage.tsx';
+import RafflesPage from './pages/RafflesPage/RafflesPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,19 @@ const router = createBrowserRouter([
         path: '/f1-challenge',
         element: <ChallengePageF1 />,
       },
+      {
+        path: '/raffles',
+        element: <RafflesPage />,
+      },
+      {
+        path: '/raffles/winners',
+        element: <RaffleWinnersPage />,
+      },
+      {
+        path: '/f1-challenge',
+        element: <ChallengePageF1 />,
+      },
+
       {
         path: '/profile',
         element: <ProfilePage />,

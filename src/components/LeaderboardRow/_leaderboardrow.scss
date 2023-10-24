@@ -20,6 +20,7 @@
   .user {
     display: flex;
     align-items: center;
+    overflow-x: auto;
 
     &__image {
       height: 3rem;

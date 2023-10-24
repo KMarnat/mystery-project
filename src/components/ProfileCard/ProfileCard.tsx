@@ -1,11 +1,12 @@
 import { useRef, useState, useEffect } from 'react';
-import giraffeAvatar from '../../assets/giraffeAvatar.svg';
-import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
+import { useUserContext } from '../../contexts/UserContext';
+import Button from '../Button/Button';
 
 const ProfileCard: React.FC = () => {
   const [avatarHeight, setAvatarHeight] = useState<number>(0);
   const avatarRef = useRef<HTMLDivElement>(null);
+  const { username, fullName, avatar, about } = useUserContext();
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,19 +35,22 @@ const ProfileCard: React.FC = () => {
         >
           <div className="aspect-ratio">
             <div>
-              <img src={giraffeAvatar} alt="profile avatar" />
+              <img src={avatar} alt="profile avatar" />
             </div>
           </div>
         </div>
         <div className="profilecard__content">
           <div className="profilecard__user">
-            <h3>ajj123</h3>
-            <p>Alexander Juul Jakobsen</p>
+            {!username || !fullName ? (
+              <h3>Click the button below to sign up</h3>
+            ) : (
+              <>
+                <h3>{username}</h3>
+                <p>{fullName}</p>
+              </>
+            )}
           </div>
-          <p className="profilecard__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu quisque in mi consectetur
-            tempor nulla turpis sagittis non. Tincidunt...
-          </p>
+          <p className="profilecard__description">{about}</p>
           <Link to={'/profile/manage'}>
             <Button modifier="secondary">Manage My Profile</Button>
           </Link>

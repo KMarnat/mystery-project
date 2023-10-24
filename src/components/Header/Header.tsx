@@ -4,14 +4,11 @@ import menu from '../../assets/menu.svg';
 import navlogo from '../../assets/logo-navbar.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { MouseEventHandler } from 'react';
+import { useUiContext } from '../../contexts/UiContext';
 
-interface HeaderProps {
-  activeMenu: boolean;
-  setActiveMenu: (activeMenu: boolean) => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ activeMenu, setActiveMenu }) => {
+const Header: React.FC = () => {
   const navigate = useNavigate();
+  const { activeMenu, setActiveMenu } = useUiContext();
 
   const handleClick: MouseEventHandler<HTMLElement> = () => {
     navigate(-1);
@@ -28,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ activeMenu, setActiveMenu }) => {
       <button className="header__button" onClick={() => setActiveMenu(!activeMenu)}>
         <img src={menu} alt="menu" />
       </button>
-      <Menu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+      <Menu />
     </header>
   );
 };

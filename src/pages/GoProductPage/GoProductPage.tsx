@@ -6,6 +6,9 @@ import legionGoImage from '../../assets/legion-go-2.svg';
 import { productData, productPageChallenge, term } from './utils/GoProductData';
 
 const GoProductPage = () => {
+  const legionGoStore =
+    'https://www.elgiganten.dk/product/gaming/gaming-pc/handholdt-gaming-pc/lenovo-legion-go-gaming-handholdt-enhed/653040';
+
   return (
     <main>
       <ProductIntro title={productData.title} desc={productData.desc} image={productData.image} />
@@ -18,7 +21,12 @@ const GoProductPage = () => {
       <ProductCta>
         <p>A new Windows experience, bringing you closer to the people and things you love.</p>
       </ProductCta>
-      <ProductCta image={legionGoImage} modified="product-ad__image--modified" />
+      <ProductCta
+        image={legionGoImage}
+        modified="product-ad__image--modified"
+        btnText="Buy Legion Go"
+        productPage={legionGoStore}
+      />
     </main>
   );
 };
