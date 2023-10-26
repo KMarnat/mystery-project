@@ -9,10 +9,9 @@ import Button from '../Button/Button';
 
 interface GamepassProps {
   terms: string;
-  modifier?: string;
 }
 
-const Gamepass: React.FC<GamepassProps> = ({ terms, modifier }) => {
+const Gamepass: React.FC<GamepassProps> = ({ terms }) => {
   const [settings] = useState({
     slidesToShow: 2.2,
     slidesToScroll: 1,
@@ -23,7 +22,7 @@ const Gamepass: React.FC<GamepassProps> = ({ terms, modifier }) => {
   });
 
   return (
-    <section className={`gamepass ${modifier}`}>
+    <section className="gamepass">
       <img src={gamepassImg} alt="gamepass" className="gamepass__logo" />
       <h2 className="gamepass__title">PC GAME PASS</h2>
       <p>

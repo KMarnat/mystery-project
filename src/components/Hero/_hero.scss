@@ -1,20 +1,19 @@
 /* Hero component
 ----------------*/
 .hero {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  margin-top: 5rem;
-  margin-bottom: -7rem;
+  margin-top: 5rem; // Spacing outside the element, top
+  margin-bottom: -7rem; // Spacing ouside the element, bototm. Pulling container below over the hero container
 
+  // Modified class for challenge pages
   &--normal {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0; // Spacing outside the element, top
+    margin-bottom: 0; // Spacing ouside the element, bottom
   }
 
+  // The iamge
   &__banner {
-    width: 100%;
+    width: 100%; // Take as much space as possible vertically
+    // Opacity gradient
     -webkit-mask-image: -webkit-gradient(
       linear,
       left 70%,
@@ -23,10 +22,14 @@
       to(rgba(0, 0, 0, 0))
     );
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    //
 
+    // Modified class for challenge pages
     &--normal {
+      // Removing gradient
       -webkit-mask-image: none;
       mask-image: none;
+      //
     }
   }
 }

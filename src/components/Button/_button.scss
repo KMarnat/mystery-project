@@ -2,10 +2,9 @@
 ------------------- */
 .btn {
   height: 3.5rem;
-  // width: 10rem;
-  font-weight: 700;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
+  font-weight: 700; // Text boldness
+  border-radius: 0.5rem; // Smoother borders
+  transition: all 0.3s ease-in-out; // Transition settings
 
   &--primary {
     background-color: var(--btn__primary-bg);
@@ -37,7 +36,7 @@
 
   &--gamepass {
     background-color: var(--color-gamepass);
-    width: 100%;
-    border-radius: 0;
+    width: 100%; // Take as much space as possibe vertically
+    border-radius: 0; // No border radius, pointy corners
   }
 }

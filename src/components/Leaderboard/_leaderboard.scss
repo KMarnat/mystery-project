@@ -2,14 +2,12 @@
 ------------------------- */
 .leaderboard {
   max-height: 25rem;
-  overflow-y: auto;
+  overflow-y: auto; // If content is overflowing there will me scrolling in that container
+
+  // Grid of the top 10 finishers
   &__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    padding: 1rem;
-    overflow-y: scroll;
+    display: grid; // Activate grid
+    grid-template-columns: 1fr; // 1 column
+    padding: 1rem; // Spacing inside the element
   }
 }

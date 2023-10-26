@@ -1,24 +1,23 @@
 /* ProductCta component
 --------------------- */
 .product-ad {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin-top: 4rem;
+  display: flex; // Activate flex
+  flex-direction: column; // Placing items below one another
+  padding: 1rem; // Spacing inside the element
+  margin-top: 4rem; // Spacing outside the element, top
   text-align: center;
-  align-items: center;
+  align-items: center; // Aligning items center on the cross axis
 
   &__image {
     min-height: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4rem; // Spacing outside the element, bottom
 
     &--modified {
-      margin-bottom: 1rem;
+      margin-bottom: 1rem; // Spacing outside the element, bottom
     }
   }
 
   button {
-    width: auto;
-    padding: 0 3rem;
+    padding: 0 3rem; // Spacing inside the element
   }
 }

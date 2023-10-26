@@ -1,16 +1,17 @@
 /* Header component
 --------------------*/
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1.25rem;
+  display: flex; // Activate flex
+  justify-content: space-between; // Equal space between items
+  padding: 0 1.25rem; // Spacing inside the element
   background-color: var(--bg-color-dark);
-  align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  width: 100%;
+  align-items: center; // Aligning items center on the cross axis
+  position: fixed; // Not moving when scrolling
+  top: 0; // Positioning on top
+  z-index: 10; // Positioning on the Z axis
+  width: 100%; // Take as much space as possible horizontally
 
+  // Buttons in the header
   &__button {
     height: 2.5rem;
     width: 2.5rem;

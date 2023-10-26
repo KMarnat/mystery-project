@@ -5,36 +5,36 @@
   align-items: center; // Centering items
   flex-direction: column; // Staking on top of each other
   background-color: var(--card-bg); // Setting background color
-  position: relative; // Positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left
+  position: relative; // Needed for positioning
   border-radius: 0.625rem; // 10px border radius
   align-self: flex-start; // Background is sized to the content, not the cell
   padding: 0 1rem 1rem; // Spacing inside the element
-  margin: 13rem 0rem 1rem;
+  margin: 13rem 0rem 1rem; // Spacing outside the element
   background-color: var(--color-transparent);
 
   @media (min-width: 26.75em) {
-    margin: 17rem 0rem 1rem;
+    margin: 17rem 0rem 1rem; // Spacing outside the element
   }
 
   @media (min-width: 36em) {
-    margin: 20rem 0rem 1rem;
+    margin: 20rem 0rem 1rem; // Spacing outside the element
   }
 
+  // User info container
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
 
     button {
-      padding: 0 2rem;
+      padding: 0 2rem; // Spacing inside the element
       border-color: #fff;
     }
   }
 
+  // Container of username and full name
   &__user {
+    // Username
     h3 {
-      margin-bottom: 0;
+      margin-bottom: 0; // Spacing outside the element
     }
   }
 
@@ -44,6 +44,7 @@
     width: 100%; // Taking up 100% of space horizontally
     transform: translateY(-50%); // Moving the image up on the Y axis
 
+    // Needed for the responsive image
     div {
       img {
         border: 7px solid transparent; // Border around the profile image
@@ -55,15 +56,15 @@
   }
 }
 
+// Challenges button
 .profile__challenges {
-  width: 100%;
-  border-radius: 0.625rem;
-  color: #fff;
-  font-weight: 700;
+  width: 100%; // Take as much space as possible horizontally
+  border-radius: 0.625rem; // 10px corners radius
+  color: #fff; // Text color
+  font-weight: 700; // Text thickness
   height: 3.5rem;
-  background-image: url('/src/assets/button-assets/button-bg.svg');
-  background-repeat: no-repeat;
+  background-image: url('/src/assets/button-assets/button-bg.svg'); // The image in the button
   background-size: cover;
-  background-position: center;
+  background-position: center; // Positioning of the image in the button
   background-color: var(--color-transparent);
 }

@@ -1,43 +1,49 @@
 /* Footer component
 -------------------*/
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4rem 0 1rem;
+  display: flex; // Activate flex
+  flex-direction: column; // Placing items below one another
+  align-items: center; // Aligning items center on the cross axis
+  margin: 4rem 0 1rem; // Spacing outside the element
 
+  // Container of the social media buttons
   &__socials {
-    display: flex;
-    justify-content: center;
+    display: flex; // Activate flex
+    justify-content: center; // Aligning items center on the main axis
   }
 
+  // Button
   &__button {
-    margin: 0 1rem;
+    margin: 0 1rem; // Spacing outside the element
   }
 
+  // Nav list
   &__list {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; // Activate flex
+    list-style: none; // Remove dots
+    flex-wrap: wrap; // Multi line flex
+    justify-content: center; // Aligning items center on the main axis
     max-width: 17rem;
-    padding: 0;
+    padding: 0; // Spacing inside the element
 
+    // List item
     & li {
-      margin-right: 0.5rem;
-      position: relative;
+      margin-right: 0.5rem; // Spacing outside the element, right
 
+      // Pseudoelement '·' for list items
       &:after {
         content: '·'; // The dot between items
-        margin-left: 0.5rem;
+        margin-left: 0.5rem; // Spacing outside the element, left
       }
 
+      // 3rd list item
       &:nth-of-type(3) {
-        margin-right: 0;
+        margin-right: 0; // Removing spacing outside the element
       }
 
+      // Pseudoelement of 3rd list item
       &:nth-of-type(3)::after {
-        content: none; // The dot between items
+        content: none; // Removing the dot between items
       }
 
       // Selecting last item
@@ -45,12 +51,14 @@
         margin-right: 0; // Removing margin right
       }
 
+      // Last list item, pseudoelement
       &:last-of-type:after {
-        content: none;
+        content: none; // Removing the dot between items
       }
     }
   }
 
+  // Copyright text
   &__copyright {
     color: var(--color-text-muted);
   }

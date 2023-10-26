@@ -42,7 +42,7 @@ const ProfileCard: React.FC = () => {
         <div className="profilecard__content">
           <div className="profilecard__user">
             {!username || !fullName ? (
-              <h3>Click the button below to sign up</h3>
+              <h4>Set up your profile</h4>
             ) : (
               <>
                 <h3>{username}</h3>

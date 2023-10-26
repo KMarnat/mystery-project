@@ -1,10 +1,37 @@
 import { Link } from 'react-router-dom';
 import { useUserContext } from '../../contexts/UserContext';
 import Button from '../../components/Button/Button';
+import { ChangeEvent, useState } from 'react';
 
 const ProfileManage = () => {
   const { username, fullName, avatar, email, about, setUsername, setFullName, setEmail, setAbout } =
     useUserContext();
+
+  /* State that holds input field values. When "Save" button is clicked the values are sent into the UserContext */
+  const [localValues, setLocalValues] = useState({
+    username: username,
+    fullName: fullName,
+    email: email,
+    about: about,
+  });
+
+  /* When input field values change, they are saved in state */
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setLocalValues({
+      ...localValues,
+      [name]: value,
+    });
+  };
+
+  /* Click function for "Save" button. Saving values into the UserContext */
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setUsername(localValues.username);
+    setFullName(localValues.fullName);
+    setEmail(localValues.email);
+    setAbout(localValues.about);
+  };
 
   return (
     <section className="profilemanage">
@@ -22,38 +49,42 @@ const ProfileManage = () => {
         <label htmlFor="">Name</label>
         <input
           type="text"
+          name="fullName"
           placeholder="Type your full name..."
-          value={fullName ? fullName : ''}
-          onChange={(e) => setFullName(e.target.value)}
+          value={localValues.fullName}
+          onChange={handleChange}
         />
 
         <label htmlFor="">Username</label>
         <input
           type="text"
+          name="username"
           placeholder="Type your username..."
-          value={username ? username : ''}
-          onChange={(e) => setUsername(e.target.value)}
+          value={localValues.username}
+          onChange={handleChange}
         />
 
         <label htmlFor="">About</label>
         <textarea
-          name=""
-          id=""
+          name="about"
           rows={3}
           placeholder="Tell us about yourself..."
-          value={about ? about : ''}
-          onChange={(e) => setAbout(e.target.value)}
+          value={localValues.about}
+          onChange={handleChange}
         ></textarea>
 
         <label htmlFor="">Email address</label>
         <input
           type="text"
+          name="email"
           placeholder="Type your email..."
-          value={email ? email : ''}
-          onChange={(e) => setEmail(e.target.value)}
+          value={localValues.email}
+          onChange={handleChange}
         />
       </form>
-      <Button modifier="go">Save</Button>
+      <Button modifier="go" onClick={handleClick}>
+        Save
+      </Button>
     </section>
   );
 };

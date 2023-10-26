@@ -1,57 +1,68 @@
 /* ChangeAvatar component 
 ------------------------- */
 .change-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; // Activate flexbox
+  flex-direction: column; // Placing items below one another
+  align-items: center; // Aligning items center on the cross axis
 
+  // Image container
   &__main {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; // Spacing outside the element, bottom
     width: 12rem;
     height: 12rem;
-    border-radius: 50%;
-    aspect-ratio: 1;
+    border-radius: 50%; // Round corners
+    overflow: hidden; // Hiding parts of the image to make the image round
+
+    // Main image
+    img {
+      height: 13rem;
+      object-fit: cover; // Image is filling the div
+    }
   }
 
+  // Remove avatar button under image
   button {
-    border-color: #fff;
-    padding: 0 2rem;
+    border-color: #fff; // Changing border color
+    padding: 0 2rem; // Spaicing inside the element
   }
 
+  // Container for collections of images
   .gallery {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0; // Spacing outside the element
 
+    // Image grid
     &__grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: 1fr;
-      grid-column-gap: 0.5rem;
+      display: grid; // Activate grid
+      grid-template-columns: repeat(6, 1fr); // 6 images per row
+      grid-template-rows: 1fr; // Equal row width
+      grid-column-gap: 0.5rem; // Spacing between columns
     }
 
+    // Image inside grid cell
     &__image {
       max-width: 3rem;
       max-height: 3rem;
-      border-radius: 0.625rem;
-      background-color: var(--color-transparent);
+      border-radius: 0.625rem; // Border roundness
+      background-color: var(--color-transparent); // Colored background for empty cell
 
+      // File upload button in the first grid
       input[type='file'] {
-        display: none;
+        display: none; // Hiding the upload file button
       }
 
+      //
       label {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        padding: 6px 12px;
-        cursor: pointer;
-        font-size: 1.5rem;
+        display: flex; // Activate flexbox
+        align-items: center; // Aligning items center on the cross axis
+        justify-content: center; // Aligning items center on the main axis
+        height: 100%; // Take as much space as possible vertically
+        font-size: 1.5rem; // Size of the '+'
       }
     }
 
+    // Title of each gallery
     &__title {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.5rem; // Spacing under the title
     }
   }
 }

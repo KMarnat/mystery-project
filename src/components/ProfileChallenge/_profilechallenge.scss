@@ -1,38 +1,43 @@
 /* ProfileChallenge component
 --------------------------- */
 .profile-challenge {
+  display: flex; // Activate flex
+  padding: 1rem; // Spacing inside the element
+  margin: 1rem 0; // Spacing outside the element
+  overflow: hidden; // Hiding elements that flow over container
   background-color: var(--color-transparent);
-  padding: 1rem;
-  display: flex;
-  margin: 1rem 0;
-  overflow: hidden;
 
+  // Challenge info
   &__details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: flex; // Activate flex
+    flex-direction: column; // Placing items below one another
+    justify-content: space-between; // Equal space between items
 
     p {
-      margin: 0;
+      margin: 0; // Removing spacing outside the element
     }
   }
 
+  // Game image
   &__poster {
-    margin-right: 1rem;
+    margin-right: 1rem; // Spacing outside the element, right
   }
 
+  // Challenge descriptions
   &__filters {
     span {
-      word-break: keep-all;
-      white-space: nowrap;
+      word-break: keep-all; // No word break
+      white-space: nowrap; // No wrap
     }
   }
 
+  // Company logo and name
   &__company {
-    display: flex;
+    display: flex; // Activate flex
 
+    // Logo
     img {
-      margin-right: 0.5rem;
+      margin-right: 0.5rem; // Spacing outside the element, right
     }
   }
 }

@@ -17,7 +17,9 @@ const ChangeAvatar: React.FC = () => {
 
   return (
     <div className="change-image">
-      <img src={avatar} alt="current profile avatar" className="change-image__main" />
+      <div className="change-image__main">
+        <img src={avatar} alt="current profile avatar" />
+      </div>
       <Button
         modifier="secondary"
         onClick={() => avatar !== defaultImage && setAvatar(defaultImage)}

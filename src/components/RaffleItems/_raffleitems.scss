@@ -1,20 +1,20 @@
 /* RaffleItems component
 ------------------------ */
 .raffleitems {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4rem 0;
+  display: flex; // Activate flex
+  flex-direction: column; // Placing items below one another
+  align-items: center; // Aligning items center on the cross axis
+  margin: 4rem 0; // Spacing outside the element
 
   &__product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; // Activate flex
+    flex-direction: column; // Placing items below one another
+    align-items: center; // Aligning items center on the cross axis
     text-align: center;
   }
 
   button {
-    margin-top: 0.5rem;
+    margin-top: 0.5rem; // Spacing outside the element, top
     width: 12rem;
   }
 }

@@ -1,19 +1,21 @@
 /* Intro component
 -----------------*/
 .intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 4rem;
-  text-align: center;
-  padding: 0 1.125rem;
+  display: flex; // Activate flexbox
+  flex-direction: column; // Placing items below one another
+  align-items: center; // Aligning items center on the cross axis
+  margin-bottom: 4rem; // Spacing outside the element, bottom
+  text-align: center; // ALigning text center
+  padding: 0 1.125rem; // Spaicing inside the element
 
+  // "Try It Out" button
   button {
     width: 10rem;
   }
 
+  // Image of the product
   &__legion {
     max-width: 16rem;
-    z-index: 9;
+    z-index: 9; // Positioning on the Z axis
   }
 }

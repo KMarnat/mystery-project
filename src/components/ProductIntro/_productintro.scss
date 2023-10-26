@@ -1,30 +1,28 @@
 /* Product introduction component 
 ---------------------------------*/
 .product-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 6rem 0 4rem;
-  padding: 0 1rem;
+  display: flex; // Activate flex
+  flex-direction: column; // Placing items below one another
+  align-items: center; // Aligning items center on the cross axis
+  margin: 6rem 0 4rem; // Spacing outside the element
+  padding: 0 1rem; // Spacing inside the element
 
-  &__title {
-    align-self: flex-start;
-  }
-
+  // Product image
   &__image {
     width: 20rem;
   }
 
   &__promotion {
-    display: flex;
-    gap: 1.5rem;
+    display: flex; // Activate flex
+    gap: 1.5rem; // Gap between the 2 logos
 
     img {
       height: 1.6rem;
-      margin: 1rem 0;
+      margin: 1rem 0; // Spacing outside the element
     }
   }
 
+  // Paragraph describing the product
   &__description {
     text-align: center;
   }

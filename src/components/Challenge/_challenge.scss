@@ -2,12 +2,15 @@
 ------------------------- */
 .challenge {
   position: relative;
+
+  // Low opacity text behind title
   &__question {
-    position: absolute;
-    z-index: 1;
-    padding: 1rem;
-    font-size: 3rem;
-    opacity: 0.2;
+    position: absolute; // Needed for positioning
+    z-index: 1; // Position on the Z axis
+    padding: 1rem; // Spacing inside the element
+    font-size: 3rem; // Text size
+    opacity: 0.2; // See-through
+    // Opacity gradient
     -webkit-mask-image: -webkit-gradient(
       linear,
       left 50%,
@@ -16,11 +19,14 @@
       to(rgba(0, 0, 0, 0))
     );
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    //
   }
 
+  // Challenge component background
   &__poster {
-    position: relative;
-    width: 100%;
+    position: relative; // Needed for positioning
+    width: 100%; // Take as much space as possibe vertically
+    // Opacity gradient
     -webkit-mask-image: linear-gradient(
       to bottom,
       rgba(64, 64, 64, 0) 0%,
@@ -29,29 +35,31 @@
       rgba(64, 64, 64, 0) 100%
     );
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    //
   }
 
+  // Challenge title
   &__title {
-    position: absolute;
-    z-index: 2;
-    padding: 1.5rem 1rem;
+    position: absolute; // Needed for positioning
+    z-index: 2; // Position on the Z axis
+    padding: 1.5rem 1rem; // Spacing inside the element
   }
 
+  // Join challenge button with progress bar
   &__cta {
-    position: relative;
-    margin-top: -5rem;
-    padding: 1rem 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative; // Needed for positioning
+    margin-top: -5rem; // Spacing outside the element, pulling the container up on the Y axis
+    padding: 1rem 1rem 0; // Spacing inside the element
 
+    // "Score The Most Points" button
     button {
-      width: 100%;
+      width: 100%; // Take as much space as possibe vertically
     }
 
+    // Progress bar below button
     progress {
       height: 1.5rem;
-      width: 100%;
+      width: 100%; // Take as much space as possibe vertically
     }
   }
 }

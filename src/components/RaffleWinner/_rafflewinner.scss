@@ -2,29 +2,31 @@
 ------------------------ */
 .rafflewinner {
   &__date {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem; // Spacing outside the element, bottom
   }
 
+  // Image and info of the raffle
   &__details {
-    display: flex;
-    align-items: center;
+    display: flex; // Activate flex
+    align-items: center; // Aligning items center on the cross axis
     background-color: rgba(129, 134, 148, 0.33);
-    border-radius: 1rem;
-    margin: 2rem 0;
+    border-radius: 1rem; // 16px corner roundness
+    margin: 2rem 0; // Spacing outside the element
     height: 6rem;
 
+    // Raffled item image
     img {
       width: 8rem;
-      position: relative;
-      top: -1.5rem;
+      position: relative; // Needed for positioning
+      top: -1.5rem; // Moving the image up on the Y axis
     }
 
     h6 {
-      margin: 0;
+      margin: 0; // Spacing outside the element
     }
 
     p {
-      margin-bottom: 0;
+      margin-bottom: 0; // Spacing outside the element, bottom
     }
   }
 

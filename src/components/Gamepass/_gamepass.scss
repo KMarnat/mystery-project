@@ -1,45 +1,43 @@
 /* Gamepass component
 -------------------- */
 .gamepass {
-  padding: 0 1rem;
-  margin: 4rem 0;
-  position: relative;
+  padding: 0 1rem; // Spacing inside the element
+  margin: 4rem 0; // Spacing outside the element
+  position: relative; // Needed for placement on gamepass page
 
-  &--margin {
-    margin: 3rem 0;
-  }
-
+  // Gamepass icon next to title
   &__logo {
     max-width: 10rem;
   }
 
   &__title {
     font-size: 3rem;
-    margin: 0;
-    position: relative;
-    display: inline-block;
-    padding: 0.5rem 0 1rem;
-    margin-bottom: 2rem;
+    margin: 0; // Removing spacing outside the element
+    position: relative; // Needed for positioning of the green line
+    padding: 0.5rem 0 1rem; // Spacing inside the element
+    margin-bottom: 2rem; // Spacing outside the element, bottom
 
+    // Line under the title
     &::after {
       content: '';
-      position: absolute;
-      bottom: 0;
-      left: -10px;
+      position: absolute; // Needed for positioning
+      bottom: 0; // Bottom of the container
+      left: -0.625rem; // Positioning from the left
       width: 3rem;
       height: 5px;
-      margin-top: 1rem;
-      margin-left: 0.5rem;
+      margin: 0 1rem 0 0.5rem; // Spacing outside the element
       background-color: var(--color-gamepass); /* Adjust the color to your preference */
-      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); // Edges of the line on a slight angle
     }
   }
 
+  // Game slider
   &__slider {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0; // Spacing outside the element
   }
 
+  // Terms paragraph under the button
   &__term {
-    font-size: 0.75rem;
+    font-size: 0.75rem; // Text size
   }
 }

@@ -1,38 +1,35 @@
 /* LeaderboardRow component
 -------------------------- */
 .leaderboardrow {
-  display: flex;
-  align-items: center;
+  display: flex; // Activate flex
+  align-items: center; // Aligning items center on the cross axis
   max-height: 25rem;
 
+  // Placement number
   &__placement {
-    padding: 0.5rem;
-    margin: 0 1rem 0 0;
-    min-width: 3rem;
+    padding: 0.5rem; // Spacing inside the element
+    margin: 0 1rem 0 0; // Spacing outside the element
+    min-width: 2rem;
   }
 
   &__points {
-    margin: 0;
-    margin-left: auto;
-    padding: 1rem;
+    margin: 0; // Removing spacing outside the element
+    margin-left: auto; // Aligns to the right
+    padding: 1rem; // Spacing inside the element
   }
 
+  // Container of the finishers image and username
   .user {
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
+    display: flex; // Activate flex
+    align-items: center; // Aligning items center on the cross axis
+    overflow-x: auto; // If username is too long on X axis, the name is scrollable
 
     &__image {
       height: 3rem;
       width: 3rem;
-      margin-right: 1rem;
+      margin-right: 1rem; // Spacing outside the element, right
       background-color: #d9d9d9;
-      border-radius: 50%;
-
-      img {
-        background-size: cover;
-        background-position: center;
-      }
+      border-radius: 50%; // Round corners
     }
   }
 }

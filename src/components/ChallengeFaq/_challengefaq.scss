@@ -1,13 +1,14 @@
 /* ChallengeFaq component
 ------------------------ */
 .challengefaq {
-  padding: 0 1rem;
+  padding: 0 1rem; // Spacing inside the element
 
   &__question {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; // Spacing outside the element, bottom
 
+    // Title of each paragraph
     h5 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.5rem; // Spacing outside the element, bottom
     }
   }
 }
