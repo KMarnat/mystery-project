@@ -17,7 +17,7 @@ const Gamepass: React.FC<GamepassProps> = ({ terms }) => {
     slidesToScroll: 1,
     arrows: false,
     centerMode: false,
-    centerPadding: '30px',
+    // centerPadding: '30px',
     infinite: false,
   });
 
@@ -32,8 +32,12 @@ const Gamepass: React.FC<GamepassProps> = ({ terms }) => {
       <div className="gamepass__slider">
         <Slider {...settings}>
           {games.map((game, i) => (
-            <div key={i}>
-              <img src={game} alt="game poster" />
+            <div className="game" key={i}>
+              <img src={game.image} alt="game poster" />
+              <div className="game__details">
+                <h5>{game.name}</h5>
+                <p>{game.genre}</p>
+              </div>
             </div>
           ))}
         </Slider>
