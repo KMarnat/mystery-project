@@ -1,20 +1,23 @@
 /* RaffleWinnersPage component
 --------------------------- */
 .rafflewinnerspage {
-  margin-top: 6rem;
-  padding: 0 1rem;
+  margin-top: 6rem; // Spacing outside the element, top
+  padding: 0 1rem; // Spacing inside the element
 
+  // Group of the raffle components
   &__group {
-    display: flex;
-    flex-direction: column;
+    display: flex; // Activate flex
+    flex-direction: column; // Aligning items under each other
 
+    // "Join The Raffle" button
     button {
-      align-self: center;
-      padding: 0 1rem;
+      align-self: center; // Aligning the button center
+      padding: 0 1rem; // Spacing inside the element
     }
   }
 
+  // Last paragraph of the page
   &__chance {
-    text-align: center;
+    text-align: center; // Aligning text center
   }
 }

@@ -1,6 +1,6 @@
 const RaffleDetails = () => {
   return (
-    <section>
+    <section className="raffledetails">
       <div>
         <h2>Schedule</h2>
         <p>Winners will be drawn on the following times:</p>

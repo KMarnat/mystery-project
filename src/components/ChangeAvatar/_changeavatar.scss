@@ -15,7 +15,7 @@
 
     // Main image
     img {
-      height: 13rem;
+      height: 12.5rem;
       object-fit: cover; // Image is filling the div
     }
   }
@@ -36,18 +36,29 @@
       grid-template-columns: repeat(6, 1fr); // 6 images per row
       grid-template-rows: 1fr; // Equal row width
       grid-column-gap: 0.5rem; // Spacing between columns
+      grid-row-gap: 0.5rem; // Spacing between rows
     }
 
     // Image inside grid cell
     &__image {
-      max-width: 3rem;
-      max-height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 3rem;
+      height: 3rem;
       border-radius: 0.625rem; // Border roundness
       background-color: var(--color-transparent); // Colored background for empty cell
 
       // File upload button in the first grid
       input[type='file'] {
         display: none; // Hiding the upload file button
+      }
+
+      img {
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
       }
 
       //

@@ -2,11 +2,10 @@
 --------------------------- */
 .challengepagefg {
   &__score {
-    display: flex;
-    margin-bottom: 0.5rem;
-    height: auto;
+    display: flex; // Activate flex
+    margin-bottom: 0.5rem; // Spacing outside the element, bottom
     p {
-      margin: 0;
+      margin: 0; // Spacing outside the element
     }
   }
 }

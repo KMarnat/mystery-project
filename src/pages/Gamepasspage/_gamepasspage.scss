@@ -2,7 +2,7 @@
 -----------------*/
 .gamepasspage {
   background-image: url('/src/assets/legion_icon-bg.svg');
-  background-repeat: no-repeat;
-  background-position: top 50% right -10%;
+  background-repeat: no-repeat; // One image on background
+  background-position: top 50% right -20%; // Position of the image from top and right
   background-size: 15rem;
 }

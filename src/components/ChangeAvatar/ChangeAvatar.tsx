@@ -1,15 +1,29 @@
 import { useUserContext } from '../../contexts/UserContext';
+import { ChangeEvent, useState } from 'react';
 
-import giraffeSmall from '../../assets/giraffeSmall.svg';
 import AvatarGallery from '../AvatarGallery/AvatarGallery';
 import Button from '../Button/Button';
 import { images, images2, images3, images4, images5 } from './utils/images';
 
 const ChangeAvatar: React.FC = () => {
   const { avatar, setAvatar } = useUserContext();
+  const [selectedImages, setSelectedImages] = useState<File[]>([]);
 
   const handleClick: React.MouseEventHandler<HTMLImageElement> = (e) => {
     setAvatar(e.currentTarget.src);
+  };
+
+  const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (files) {
+      const fileList = Array.from(files);
+
+      const filteredFiles = fileList.filter((file) =>
+        selectedImages.every((selectedFile) => selectedFile.name !== file.name)
+      );
+
+      setSelectedImages([...filteredFiles, ...selectedImages]);
+    }
   };
 
   const defaultImage =
@@ -37,17 +51,18 @@ const ChangeAvatar: React.FC = () => {
                 name="avatar"
                 accept="image/png, image/jpeg"
                 className="gallery__upload"
+                multiple
+                onChange={handleImageChange}
               />
               +
             </label>
           </div>
-          <div className="gallery__image">
-            <img src={giraffeSmall} alt="" onClick={handleClick} />
-          </div>
-          <div className="gallery__image"></div>
-          <div className="gallery__image"></div>
-          <div className="gallery__image"></div>
-          <div className="gallery__image"></div>
+          {!selectedImages && <div className="gallery__image"></div>}
+          {selectedImages.map((image, index) => (
+            <div className="gallery__image" key={index}>
+              <img src={URL.createObjectURL(image)} alt="" onClick={handleClick} />
+            </div>
+          ))}
         </div>
       </div>
       <AvatarGallery title={images.title} images={images.images}></AvatarGallery>

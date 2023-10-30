@@ -9,7 +9,7 @@ const Gamepasspage: React.FC = () => {
   return (
     <main className="gamepasspage">
       <Hero banner={bannerGamepass} />
-      <Gamepass terms={term} modifier="gamepass--margin" />
+      <Gamepass terms={term} />
     </main>
   );
 };

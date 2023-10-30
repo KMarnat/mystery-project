@@ -12,8 +12,8 @@ const AvatarGallery: React.FC<AvatarGalleryProps> = ({ title, images }) => {
     <div className="gallery">
       <p className="gallery__title">{title}</p>
       <div className="gallery__grid">
-        {images.map((fluff) => (
-          <div className="gallery__image">
+        {images.map((fluff, i) => (
+          <div className="gallery__image" key={i}>
             <img src={fluff} alt="" onClick={(e) => setAvatar(e.currentTarget.src)} />
           </div>
         ))}

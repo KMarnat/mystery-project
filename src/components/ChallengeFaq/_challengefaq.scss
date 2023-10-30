@@ -2,6 +2,10 @@
 ------------------------ */
 .challengefaq {
   padding: 0 1rem; // Spacing inside the element
+  background-image: url('/src/assets/legion_icon-bg.svg');
+  background-repeat: no-repeat; // One image on background
+  background-position: top 50% left -10%; // Position of the image from top and right
+  background-size: 15rem;
 
   &__question {
     margin-bottom: 2rem; // Spacing outside the element, bottom
