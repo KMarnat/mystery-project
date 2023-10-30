@@ -1,4 +1,7 @@
 import Button from '../Button/Button';
+import ErrorPopup from '../../components/ErrorPopup/ErrorPopup';
+import { useState } from 'react';
+import { useUserContext } from '../../contexts/UserContext';
 
 interface JoinChallengeProps {
   title: string;
@@ -6,9 +9,25 @@ interface JoinChallengeProps {
 }
 
 const JoinChallenge: React.FC<JoinChallengeProps> = ({ title, subTitle }) => {
+  const [showError, setShowError] = useState(false);
+  const [shakeModule, setShakeModule] = useState(false);
+  const { email } = useUserContext();
+
+  const emailCheck = () => {
+    if (!email) {
+      setShowError(true);
+      setShakeModule(true);
+      setTimeout(() => {
+        setShakeModule(false);
+      }, 500);
+    }
+  };
+
   return (
     <section className="join-challenge">
-      <Button modifier="go">Join This Challenge</Button>
+      <Button modifier="go" onClick={() => emailCheck()}>
+        Join This Challenge
+      </Button>
       <h3>{title}</h3>
       <p className="join-challenge__muted">{subTitle}</p>
       <p>
@@ -25,6 +44,7 @@ const JoinChallenge: React.FC<JoinChallengeProps> = ({ title, subTitle }) => {
         <span className="fancy-label">What to win?</span>
         <span className="fancy-label">Terms</span>
       </div>
+      {showError && <ErrorPopup modifier={shakeModule ? 'shake' : ''} />}
     </section>
   );
 };

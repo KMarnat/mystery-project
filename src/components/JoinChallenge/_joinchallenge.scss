@@ -8,6 +8,12 @@
   padding: 0 1rem; // Spaicing inside the element
   margin-bottom: 1rem; // Spacing outside the element, bottom
 
+  // Challenge title and game name
+  h3,
+  p {
+    margin-bottom: 0.5rem;
+  }
+
   // Container of start and end time of the challenge
   &__time {
     display: flex; // Activate flexbox

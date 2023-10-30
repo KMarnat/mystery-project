@@ -16,6 +16,7 @@
     // Main image
     img {
       height: 12.5rem;
+      width: 12.5rem;
       object-fit: cover; // Image is filling the div
     }
   }
@@ -41,10 +42,10 @@
 
     // Image inside grid cell
     &__image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
+      display: flex; // Activate flex
+      justify-content: center; // Align items center on the main axis
+      align-items: center; // Align items center on the cross axis
+      overflow: hidden; // Hide parts of items that are flowing over the container
       width: 3rem;
       height: 3rem;
       border-radius: 0.625rem; // Border roundness
@@ -55,6 +56,7 @@
         display: none; // Hiding the upload file button
       }
 
+      //
       img {
         min-height: 100%;
         min-width: 100%;

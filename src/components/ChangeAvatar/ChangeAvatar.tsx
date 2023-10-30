@@ -15,6 +15,7 @@ const ChangeAvatar: React.FC = () => {
 
   const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
+
     if (files) {
       const fileList = Array.from(files);
 
@@ -25,6 +26,8 @@ const ChangeAvatar: React.FC = () => {
       setSelectedImages([...filteredFiles, ...selectedImages]);
     }
   };
+
+  console.log(selectedImages.length);
 
   const defaultImage =
     'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png';
@@ -57,12 +60,12 @@ const ChangeAvatar: React.FC = () => {
               +
             </label>
           </div>
-          {!selectedImages && <div className="gallery__image"></div>}
           {selectedImages.map((image, index) => (
             <div className="gallery__image" key={index}>
               <img src={URL.createObjectURL(image)} alt="" onClick={handleClick} />
             </div>
           ))}
+          {selectedImages.length === 0 && <div className="gallery__image"></div>}
         </div>
       </div>
       <AvatarGallery title={images.title} images={images.images}></AvatarGallery>
