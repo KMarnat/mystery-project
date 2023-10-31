@@ -7,6 +7,8 @@
   margin-top: -1.75rem; // Spacing outside the element, top
   padding: 0 1rem; // Spaicing inside the element
   margin-bottom: 1rem; // Spacing outside the element, bottom
+  position: relative;
+  z-index: 101;
 
   // Challenge title and game name
   h3,

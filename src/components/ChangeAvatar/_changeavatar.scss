@@ -46,8 +46,8 @@
       justify-content: center; // Align items center on the main axis
       align-items: center; // Align items center on the cross axis
       overflow: hidden; // Hide parts of items that are flowing over the container
-      width: 3rem;
-      height: 3rem;
+      max-width: 3rem;
+      max-height: 3rem;
       border-radius: 0.625rem; // Border roundness
       background-color: var(--color-transparent); // Colored background for empty cell
 
@@ -63,13 +63,14 @@
         object-fit: cover;
       }
 
-      //
       label {
         display: flex; // Activate flexbox
         align-items: center; // Aligning items center on the cross axis
         justify-content: center; // Aligning items center on the main axis
         height: 100%; // Take as much space as possible vertically
         font-size: 1.5rem; // Size of the '+'
+        width: 3rem;
+        height: auto;
       }
     }
 

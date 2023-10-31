@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import gamepassImg from '../../assets/logo-gamepass.png';
-import games from './games';
+import games from './utils/games';
 import Button from '../Button/Button';
 
 interface GamepassProps {
@@ -17,7 +17,6 @@ const Gamepass: React.FC<GamepassProps> = ({ terms }) => {
     slidesToScroll: 1,
     arrows: false,
     centerMode: false,
-    // centerPadding: '30px',
     infinite: false,
   });
 
@@ -33,10 +32,12 @@ const Gamepass: React.FC<GamepassProps> = ({ terms }) => {
         <Slider {...settings}>
           {games.map((game, i) => (
             <div className="game" key={i}>
-              <img src={game.image} alt="game poster" />
               <div className="game__details">
-                <h5>{game.name}</h5>
-                <p>{game.genre}</p>
+                <img src={game.image} alt="game poster" />
+                <div className="game__title">
+                  <h5>{game.name}</h5>
+                  <p>{game.genre}</p>
+                </div>
               </div>
             </div>
           ))}

@@ -6,11 +6,18 @@
   width: 95%;
   background-color: var(--bg-color-menu);
   padding: 1.5rem 2rem; // Spacing inside the element
-  position: absolute; // Needed for positioning
+  position: fixed; // Needed for positioning
   top: 0; // Placing on top
+  // bottom: 0;
   right: -95%; // Initially off-screen, when active it slides into view
   z-index: 10; // Position on Z axis
   transition: right 0.3s ease-in-out; // Transition settings for right
+  overflow-y: scroll; // If content is flowing over the container on Y axis, it will be scrollable
+
+  // The menu becomes scrollable when screen height is below 680px
+  @media only screen and (max-height: 680px) {
+    bottom: 0; // Attatching menu to bottom. Without this "overflow-y: scroll" doesn't work
+  }
 
   // Class when menu becomes visible
   &--active {

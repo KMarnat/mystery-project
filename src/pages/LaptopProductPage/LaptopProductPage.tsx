@@ -10,7 +10,7 @@ const LaptopProductPage = () => {
     'https://www.elgiganten.dk/product/gaming/gaming-pc/barbar-gaming-computer/lenovo-legion-9-i9-13980hx6420004090-16-barbar-gaming-computer/655670';
 
   return (
-    <main>
+    <main className="laptoppage">
       <ProductIntro title={productData.title} desc={productData.desc} image={productData.image} />
       <Challenge
         question={productPageChallenge.question}

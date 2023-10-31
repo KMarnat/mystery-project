@@ -14,6 +14,11 @@ interface LeaderboardProps {
 const Leaderboard: React.FC<LeaderboardProps> = ({ data }) => {
   return (
     <section className="leaderboard">
+      <div className="leaderboard__timer">
+        <h5>Leaderboard</h5>
+        <p>Updates in: 3:21</p>
+      </div>
+
       <div className="leaderboard__grid">
         {data.map((row, i) => (
           <LeaderboardRow

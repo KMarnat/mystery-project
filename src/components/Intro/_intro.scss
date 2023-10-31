@@ -7,6 +7,8 @@
   margin-bottom: 4rem; // Spacing outside the element, bottom
   text-align: center; // ALigning text center
   padding: 0 1.125rem; // Spaicing inside the element
+  position: relative;
+  z-index: 101;
 
   // "Try It Out" button
   button {

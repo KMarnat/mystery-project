@@ -1,68 +1,78 @@
 /* ProfileManage page component 
 -------------------------------*/
 .profilemanage {
-  margin: 6rem 1rem 3rem;
-  display: flex;
-  flex-direction: column;
+  margin: 6rem 1rem 3rem; // Spacing outside the element
+  display: flex; // Activate flex
+  flex-direction: column; // Aligning items under each other in column
 
+  // Title of the page
+  h3 {
+    margin: 0.5rem 0 0 0; // Removing default spacing and adding spacing on top
+  }
+
+  // First "input"
   .change-avatar {
     display: flex;
     align-items: center;
     border-radius: 0.25rem;
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-size: 0.875rem;
     background-color: var(--color-transparent);
 
+    // "Change avatar" paragraph
+    &__title {
+      margin: 0; // Remoing spacing outside the element
+    }
+
+    // Small image inside the "change-avatar" div
     &__image {
-      width: 2rem;
-      height: 2rem;
-      margin-right: 1rem;
-      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0 1rem 0 0.5rem; // Spacing outside the element, right
+      border-radius: 50%; // Round corners
     }
 
-    p {
-      margin: 0;
-    }
-
-    &__button {
+    // Arrow inside the "change-avatar" div
+    &__arrow {
+      margin-left: auto; // Margin left auto pushes the element to the right
       color: #fff;
-      padding: 0.5rem;
       font-size: 1rem;
     }
-
-    a {
-      margin-left: auto;
-    }
   }
 
+  // Container of inputs
   &__form {
-    display: flex;
-    flex-direction: column;
+    display: flex; // Activate flex
+    flex-direction: column; // Aligning items under each other in a column
+    margin-bottom: 1.5rem;
 
     label {
-      display: flex;
-      flex-direction: column;
+      display: flex; // Activate flex
+      flex-direction: column; // Aligning items under each other in a column
       font-size: 0.875rem;
-      // margin-bottom: 1rem;
+      margin: 1.5rem 0 0.5rem 0; // Spacing outside the element
     }
 
+    // Selecting first label
+    label:nth-of-type(1) {
+      margin-top: 0.75rem; // Changing spacing outsite the element, top
+    }
+
+    // Selecting all inputs and the one textarea to make them look alike
     input,
     textarea {
-      border: none;
+      border: none; // Removing border
       background-color: var(--color-transparent);
       color: #fff;
-      border-radius: 0.25rem;
-      padding: 0.75rem;
-      font-size: 0.875rem;
-    }
-
-    input {
-      margin-bottom: 1rem;
+      border-radius: 0.25rem; // Corner roundness
+      padding: 0.75rem; // Spacning inside the element
+      font-size: 0.875rem; // Text size
     }
   }
 
+  // "Save" button
   button {
-    align-self: flex-end;
-    padding: 0 2rem;
+    align-self: flex-end; // Aligns itself to right
+    padding: 0 2rem; // Spacing inside the element
   }
 }

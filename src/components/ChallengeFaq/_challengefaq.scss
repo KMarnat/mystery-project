@@ -2,10 +2,9 @@
 ------------------------ */
 .challengefaq {
   padding: 0 1rem; // Spacing inside the element
-  background-image: url('/src/assets/legion_icon-bg.svg');
+  background-image: url('/src/assets/grainy-logo.svg');
   background-repeat: no-repeat; // One image on background
-  background-position: top 50% left -10%; // Position of the image from top and right
-  background-size: 15rem;
+  background-position: top 50% left 0%; // Position of the image from top and right
 
   &__question {
     margin-bottom: 2rem; // Spacing outside the element, bottom

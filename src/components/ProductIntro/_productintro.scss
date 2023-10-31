@@ -6,6 +6,8 @@
   align-items: center; // Aligning items center on the cross axis
   margin: 6rem 0 4rem; // Spacing outside the element
   padding: 0 1rem; // Spacing inside the element
+  position: relative;
+  z-index: 101;
 
   // Product image
   &__image {

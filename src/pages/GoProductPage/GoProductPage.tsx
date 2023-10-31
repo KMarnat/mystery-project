@@ -10,7 +10,7 @@ const GoProductPage = () => {
     'https://www.elgiganten.dk/product/gaming/gaming-pc/handholdt-gaming-pc/lenovo-legion-go-gaming-handholdt-enhed/653040';
 
   return (
-    <main>
+    <main className="gopage">
       <ProductIntro title={productData.title} desc={productData.desc} image={productData.image} />
       <Challenge
         question={productPageChallenge.question}

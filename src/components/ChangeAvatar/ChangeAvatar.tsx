@@ -1,6 +1,5 @@
 import { useUserContext } from '../../contexts/UserContext';
 import { ChangeEvent, useState } from 'react';
-
 import AvatarGallery from '../AvatarGallery/AvatarGallery';
 import Button from '../Button/Button';
 import { images, images2, images3, images4, images5 } from './utils/images';
@@ -26,8 +25,6 @@ const ChangeAvatar: React.FC = () => {
       setSelectedImages([...filteredFiles, ...selectedImages]);
     }
   };
-
-  console.log(selectedImages.length);
 
   const defaultImage =
     'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png';

@@ -1,6 +1,7 @@
 import Hero from '../../components/Hero/Hero';
-import bannerGamepass from '../../assets/banner-image-gamepass.svg';
+import bannerGamepass from '../../assets/gamepass-banner.svg';
 import Gamepass from '../../components/Gamepass/Gamepass';
+import grainyLogo from '../../assets/grainy-logo.svg';
 
 const Gamepasspage: React.FC = () => {
   const term =
@@ -10,6 +11,7 @@ const Gamepasspage: React.FC = () => {
     <main className="gamepasspage">
       <Hero banner={bannerGamepass} />
       <Gamepass terms={term} />
+      <img src={grainyLogo} alt="grainy legion logo" className="gamepasspage__grainy" />
     </main>
   );
 };

@@ -10,7 +10,7 @@ const GoProductPage = () => {
     'https://www.elgiganten.dk/product/gaming/gaming-pc/stationar-gaming-computer/lenovo-legion-t5-r7-71610004070-stationar-gaming-computer/650455';
 
   return (
-    <main>
+    <main className="desktoppage">
       <ProductIntro title={productData.title} desc={productData.desc} image={productData.image} />
       <Challenge
         question={productPageChallenge.question}

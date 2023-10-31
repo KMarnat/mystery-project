@@ -2,8 +2,9 @@
 -------------------- */
 .gamepass {
   padding: 0 1rem; // Spacing inside the element
-  margin: 4rem 0; // Spacing outside the element
+  margin: 2rem 0; // Spacing outside the element
   position: relative; // Needed for placement on gamepass page
+  z-index: 101;
 
   // Gamepass icon next to title
   &__logo {
@@ -36,10 +37,12 @@
     margin: 1.5rem 0; // Spacing outside the element
 
     .game {
-      position: relative;
-      width: 100%;
-
       &__details {
+        position: relative;
+        width: fit-content;
+      }
+
+      &__title {
         height: 45%;
         width: 100%;
         display: flex;
@@ -61,6 +64,7 @@
         p {
           margin: 0;
           font-weight: 300;
+          width: fit-content;
         }
 
         h5 {

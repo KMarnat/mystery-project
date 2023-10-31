@@ -3,6 +3,9 @@
 .rafflespage {
   margin-top: 6rem; // Spacing outside the element, top
   padding: 0 1rem; // Spacing inside the element
+  background-image: url('/src/assets/grainy-logo.svg');
+  background-repeat: no-repeat; // One image on background
+  background-position: bottom 16% left 0%; // Position of the image from top and right
 
   // "See The Winners" button
   button {

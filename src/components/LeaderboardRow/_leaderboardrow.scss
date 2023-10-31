@@ -4,10 +4,12 @@
   display: flex; // Activate flex
   align-items: center; // Aligning items center on the cross axis
   max-height: 25rem;
+  background-color: rgba(129, 134, 148, 0.13);
+  margin-bottom: 0.5rem;
 
   // Placement number
   &__placement {
-    padding: 0.5rem; // Spacing inside the element
+    padding: 1rem; // Spacing inside the element
     margin: 0 1rem 0 0; // Spacing outside the element
     min-width: 2rem;
   }

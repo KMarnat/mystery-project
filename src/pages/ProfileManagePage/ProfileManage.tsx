@@ -39,13 +39,13 @@ const ProfileManage = () => {
       <form className="profilemanage__form">
         <label htmlFor="">Change avatar</label>
 
-        <div className="change-avatar">
-          <img src={avatar} alt="current profile avatar" className="change-avatar__image" />
-          <p>Change avatar</p>
-          <Link to={'/profile/manage/change-avatar'}>
-            <button className="change-avatar__button">&#8594;</button>
-          </Link>
-        </div>
+        <Link to={'/profile/manage/change-avatar'}>
+          <div className="change-avatar">
+            <img src={avatar} alt="current profile avatar" className="change-avatar__image" />
+            <p className="change-avatar__title">Change avatar</p>
+            <span className="change-avatar__arrow">&#8594;</span>
+          </div>
+        </Link>
         <label htmlFor="">Name</label>
         <input
           type="text"
