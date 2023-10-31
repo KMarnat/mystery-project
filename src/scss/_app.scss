@@ -40,10 +40,7 @@
 }
 
 body {
-  background: var(--bg-gradient);
-  background-repeat: no-repeat;
-  background-size: 100% 5000px;
-  position: relative;
+  background-image: url('./src/assets/background-gradient.svg');
 }
 
 .fancy-label {
