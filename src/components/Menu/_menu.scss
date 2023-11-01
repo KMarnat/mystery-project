@@ -4,13 +4,13 @@
   display: flex; // Activate flex
   flex-direction: column; // Placing items below one another
   height: 100%;
-  width: 95%;
+  width: 90%;
   background-color: var(--bg-color-menu);
-  padding: 0 2rem 0; // Spacing inside the element
+  padding: 0 1.5rem 0; // Spacing inside the element
   position: fixed; // Needed for positioning
   top: 0; // Placing on top
   // bottom: 0;
-  right: -95%; // Initially off-screen, when active it slides into view
+  right: -90%; // Initially off-screen, when active it slides into view
   z-index: 10; // Position on Z axis
   transition: right 0.3s ease-in-out; // Transition settings for right
   overflow-y: scroll; // If content is flowing over the container on Y axis, it will be scrollable
@@ -30,10 +30,15 @@
     display: flex; // Activate flex
     align-items: center; // Aligning items center on the cross axis
     justify-content: space-between; // Equal space between items
-    position: fixed;
-    width: 80%;
+    position: sticky;
+    width: 100%;
     background-color: var(--bg-color-menu);
-    padding: 0.5rem 0;
+    padding: 1rem 0 0.5rem;
+    top: 0;
+  }
+
+  button {
+    margin-left: 0 auto;
   }
 
   // Container of avatar and username + name
@@ -49,6 +54,7 @@
 
       // Username
       h5 {
+        font-size: 1.125rem;
         margin: 0; // Removing spacing outside the element
       }
 
@@ -79,12 +85,9 @@
 
   // Nav menus containing the games, raffle, products
   .nav {
-    &:first-of-type {
-      margin-top: 4rem;
-    }
     // Title of each list
     &__title {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     // Unordered list

@@ -1,6 +1,8 @@
+import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useUiContext } from '../../contexts/UiContext';
 import { useUserContext } from '../../contexts/UserContext';
+
 import exit from '../../assets/exit.svg';
 import csIcon from '../../assets/menu-icons/cs_icon.svg';
 import fgIcon from '../../assets/menu-icons/fg_icon.svg';
@@ -12,8 +14,27 @@ const Menu: React.FC = () => {
   const { activeMenu, setActiveMenu } = useUiContext();
   const { username, fullName, avatar } = useUserContext();
 
+  const menu = useRef(null);
+
+  const closeOpenMenus = (e: MouseEvent) => {
+    if (menu.current && activeMenu && e.target) {
+      const target = e.target as Node;
+      if (!(menu.current as Node).contains(target)) {
+        setActiveMenu(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', closeOpenMenus);
+
+    return () => {
+      document.removeEventListener('mousedown', closeOpenMenus);
+    };
+  }, [activeMenu]);
+
   return (
-    <aside className={`menu ${activeMenu ? 'menu--active' : ''}`}>
+    <aside className={`menu ${activeMenu ? 'menu--active' : ''}`} ref={menu}>
       <div className="menu__useractions">
         <Link to={'/profile'} onClick={() => setActiveMenu(!activeMenu)}>
           <div className="menu__user">
