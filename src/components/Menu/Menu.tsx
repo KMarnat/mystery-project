@@ -60,19 +60,19 @@ const Menu: React.FC = () => {
       <nav className="nav">
         <h5 className="nav__title">Play and Win</h5>
         <ul className="nav__list">
-          <Link to={'/cs2-challenge'} onClick={() => setActiveMenu(!activeMenu)}>
+          <Link to={'/challenge/cs'} onClick={() => setActiveMenu(!activeMenu)}>
             <li>
               <img src={csIcon} alt="" />
               Counter-Strike 2
             </li>
           </Link>
-          <Link to={'/fg-challenge'} onClick={() => setActiveMenu(!activeMenu)}>
+          <Link to={'/challenge/fg'} onClick={() => setActiveMenu(!activeMenu)}>
             <li>
               <img src={fgIcon} alt="" />
               Fall Guys
             </li>
           </Link>
-          <Link to={'/f1-challenge'} onClick={() => setActiveMenu(!activeMenu)}>
+          <Link to={'/challenge/f1'} onClick={() => setActiveMenu(!activeMenu)}>
             <li>
               <img src={f1Icon} alt="" />
               F1 2023
@@ -95,20 +95,26 @@ const Menu: React.FC = () => {
       <nav className="nav">
         <h5 className="nav__title">Experience during Dreamhack</h5>
         <ul className="nav__list">
-          <Link to={'/lenovo-legion-t5-gaming-desktop'} onClick={() => setActiveMenu(!activeMenu)}>
+          <Link
+            to={'product/lenovo-legion-t5-gaming-desktop'}
+            onClick={() => setActiveMenu(!activeMenu)}
+          >
             <li>
               <img src={legionIcon} alt="" />
               Legion T5 Gaming Desktop
             </li>
           </Link>
 
-          <Link to={'/lenovo-legion-9i-gaming-laptop'} onClick={() => setActiveMenu(!activeMenu)}>
+          <Link
+            to={'product/lenovo-legion-9i-gaming-laptop'}
+            onClick={() => setActiveMenu(!activeMenu)}
+          >
             <li>
               <img src={legionIcon} alt="" />
               Legion 9i Gaming Laptop
             </li>
           </Link>
-          <Link to={'/lenovo-legion-go'} onClick={() => setActiveMenu(!activeMenu)}>
+          <Link to={'product/lenovo-legion-go'} onClick={() => setActiveMenu(!activeMenu)}>
             <li>
               <img src={legionIcon} alt="" />
               Legion Go Portable Gaming

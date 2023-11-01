@@ -8,7 +8,7 @@ interface LeaderboardItem {
 }
 
 interface LeaderboardProps {
-  data: LeaderboardItem[];
+  data: LeaderboardItem[] | null;
 }
 
 const Leaderboard: React.FC<LeaderboardProps> = ({ data }) => {
@@ -20,7 +20,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ data }) => {
       </div>
 
       <div className="leaderboard__grid">
-        {data.map((row, i) => (
+        {data?.map((row, i) => (
           <LeaderboardRow
             position={row.position}
             image={row.image}
