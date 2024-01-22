@@ -40,7 +40,9 @@
 }
 
 body {
-  background-image: url("./src/assets/background-gradient.png");
+  background-image: url("assets/background-gradient.png");
+  background-position: top center; /* align to top and then center */
+  background-size: auto; /* set to always fill in the space */
 }
 
 .fancy-label {
